@@ -27,7 +27,7 @@ email="--email $LETSENCRYPT_EMAIL"
 # sleep 60
 
 # # Call our letsencrypt command, using the first domain as the directory path for the cert
-command="letsencrypt certonly $test_cert --standalone $domain_args --text --agree-tos $email --rsa-key-size 4096 --verbose --keep-until-expiring --standalone-supported-challenges http-01"
+command="certbot certonly $test_cert --standalone $domain_args --text --agree-tos $email --rsa-key-size 4096 --verbose --keep-until-expiring --standalone-supported-challenges http-01"
 # # command="letsencrypt certonly $test_cert --standalone $domain_args --text --agree-tos $email --rsa-key-size 4096 --verbose --renew-by-default --standalone-supported-challenges http-01"
 # # command="letsencrypt certonly $test_cert --standalone $domain_args --text --agree-tos $email --server https://acme-v01.api.letsencrypt.org/directory --rsa-key-size 4096 --verbose --renew-by-default --standalone-supported-challenges http-01"
 echo -e "our letsencrypt command:\n$command"
