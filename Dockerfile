@@ -1,4 +1,4 @@
-FROM quay.io/letsencrypt/letsencrypt
+FROM certbot/certbot
 MAINTAINER Lucas Swart "fluff@lukeswart.net"
 
 COPY letsencrypt.sh /
